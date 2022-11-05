@@ -4,12 +4,13 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 
 
-KEYWORDS = ['add','subtract','multiply','addition','subtraction','multiplication','product','sum']
+
 
 @api_view(['POST'])
 def post_data(request):
     header = {"Access-Control-Allow-Origin":"*"}
     if request.method == 'POST':
+        KEYWORDS = ['add','subtract','multiply','addition','subtraction','multiplication','product','sum']
         #get the data sent in the post request 
         data = request.data
         operation_type = data['operation_type']
