@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #local apps
-    'api',
+    
 
     #3rd party apps
     'rest_framework',
     'corsheaders',
+
+    #local apps
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +63,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS: True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3030',
+]
 
 ROOT_URLCONF = 'calculator.urls'
 
